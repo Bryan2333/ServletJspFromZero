@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>user_Add</title>
+    <style>
+        table {
+            margin: 0 auto;
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/myWeb/user/add" method="get">
+            <table>
+                <tr>
+                    <td>用户姓名</td>
+                    <td><label for="username"></label><input type="text" name="username" id="username"></td>
+                </tr>
+                <tr>
+                    <td>用户密码</td>
+                    <td><label for="userpasswd"></label><input type="password" name="password" id="userpasswd"></td>
+                </tr>
+                <tr>
+                    <td>用户性别</td>
+                    <td>
+                        <input type="radio" name="sex" value="男">男
+                        <input type="radio" name="sex" value="女">女
+                    </td>
+                </tr>
+                <tr>
+                    <td>用户邮箱</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="用户注册"></td>
+                    <td><input type="reset"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

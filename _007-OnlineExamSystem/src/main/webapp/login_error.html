@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            margin: 10px auto 0;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p style="font-size: 40px; color: red">用户不存在，请重新登陆</p>
+    <form action="/myWeb/user/login" method="post">
+        <table class="login">
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="userName"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="password" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="登陆"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
