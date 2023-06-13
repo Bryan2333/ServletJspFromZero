@@ -1,7 +1,7 @@
 package com.bryan._007onlineexamsystem.dao;
 
-import com.bryan._07onlineexamsystem.entity.User;
-import com.bryan._07onlineexamsystem.util.JdbcUtil;
+import com.bryan._007onlineexamsystem.entity.User;
+import com.bryan._007onlineexamsystem.util.JdbcUtil;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.sql.PreparedStatement;
@@ -27,6 +27,7 @@ public class UserDao {
             statement.setString(4, user.getEmail());
 
             result = statement.executeUpdate();
+            statement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -49,6 +50,7 @@ public class UserDao {
             statement.setString(4, user.getEmail());
 
             result = statement.executeUpdate();
+            statement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -75,6 +77,7 @@ public class UserDao {
                 User user = new User(userId, userName, password, sex, email);
                 users.add(user);
             }
+            statement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -93,6 +96,7 @@ public class UserDao {
             PreparedStatement statement = util.createStatement(sql);
             statement.setString(1, UserId);
             result = statement.executeUpdate();
+            statement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -116,6 +120,7 @@ public class UserDao {
             while (resultSet.next()) {
                 result = resultSet.getInt("count(*)");
             }
+            statement.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
